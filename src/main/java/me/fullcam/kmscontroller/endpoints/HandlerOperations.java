@@ -36,7 +36,7 @@ class HandlerOperations {
         MediaPipeline pipeline = kurentoClient.createMediaPipeline();
         WebRtcEndpoint webRtcEndpoint = new WebRtcEndpoint.Builder(pipeline).build();
         String videoUrl = message.get("video_url").getAsString();
-        final PlayerEndpoint playerEndpoint = new PlayerEndpoint.Builder(pipeline, videoUrl).build();
+        final PlayerEndpoint playerEndpoint = new PlayerEndpoint.Builder(pipeline, videoUrl).useEncodedMedia().build();
 
         final UserSession user = new UserSession(webRtcEndpoint, pipeline, playerEndpoint);
         mapOfUsers.put(session.getId(), user);
