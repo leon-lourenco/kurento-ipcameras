@@ -1,0 +1,26 @@
+{
+	"configuration": {
+		"status": "error",
+		"name": "JSONConfigDemo",
+		"packages": "me.fullcam.kmscontroller.endpoints",
+		"ThresholdFilter": {
+			"level": "debug"
+		},
+		"appenders": {
+			"Console": {
+				"name": "STDOUT",
+				"PatternLayout": {
+					"pattern": "%d{dd/MMM/yyyy HH:mm:ss} %p [%c] %m%n"
+				}
+			}
+		},
+		"loggers": {
+			"root": {
+				"level": "info",
+				"AppenderRef": {
+					"ref": "STDOUT"
+				}
+			}
+		}
+	}
+}
